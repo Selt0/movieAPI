@@ -1,0 +1,10 @@
+<%- include('partials/header') -%>
+
+<h1>Welcome to Movie Query!</h1>
+
+<p>Find information about any movie (that's also in imdb)</p>
+
+<form action="/search" method="POST">
+  <input type="text" name="title" placeholder="Movie Title" />
+  <button>Submit</button>
+</form>

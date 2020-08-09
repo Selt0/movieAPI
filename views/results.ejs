@@ -1,0 +1,16 @@
+<%- include('partials/header') -%>
+
+<h1>Results</h1>
+<a href="/"> Back to search</a>
+
+<% if (movies) { %> <% movies.forEach(movie => { %>
+<ul>
+  <li><%= movie.Title %></li>
+  <li><%= movie.Year %></li>
+  <% if (movie.Poster != 'N/A') { %>
+  <img src="<%= movie.Poster %>" alt="move poster" />
+  <% } %>
+</ul>
+<% }) %> <% } else { %>
+<h3>Hmmm, couldn't seem to find the movie</h3>
+<% } %>
